@@ -10,7 +10,7 @@ source:
   sha256: 16d724dfd28bcb5a529623c7ca7cf7be394916beaa01a8f7bd9990ab93f6d9d1
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -21,6 +21,7 @@ requirements:
     - autotools_clang_conda  # [win]
     # gmpxxll is header-only but its autoconf setup is looking for a compiler
     - {{ compiler('cxx') }}
+    - {{ stdlib('c') }}
   host:
     - gmp  # [unix]
     - mpir  # [win]
