@@ -10,7 +10,7 @@ source:
   sha256: 16d724dfd28bcb5a529623c7ca7cf7be394916beaa01a8f7bd9990ab93f6d9d1
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -24,7 +24,7 @@ requirements:
     - {{ stdlib('c') }}
   host:
     - gmp  # [unix]
-    - mpir  # [win]
+    - gmp  # [win]
 
 test:
   commands:
